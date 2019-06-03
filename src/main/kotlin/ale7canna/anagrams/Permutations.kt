@@ -5,7 +5,7 @@ class Permutations {
         compute(s.toCharArray().map { it })
             .map { String(it.toCharArray()) }
 
-    private fun <T> compute(list: List<T>): List<List<T>> =
+    fun <T> compute(list: List<T>): List<List<T>> =
         list.mapIndexed { index, t ->
             compute(
                 listOf(listOf(t)),

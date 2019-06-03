@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.3.21"
+    application
 }
 
 version = "1.0-SNAPSHOT"
@@ -24,7 +25,14 @@ dependencies {
     testCompile("io.mockk:mockk:1.9.3.kotlin12")
 }
 
-
 val test by tasks.getting(Test::class) {
     useJUnitPlatform { }
+}
+
+application {
+    mainClassName = "ale7canna.anagrams.MainKt"
+}
+
+val run by tasks.getting(JavaExec::class) {
+    standardInput = System.`in`
 }
