@@ -9,6 +9,8 @@ fun main(args: Array<String>) {
     val vocabulary = File("dictionary.txt").readLines()
     val permutations = Permutations()
     val logic = Anagrams(vocabulary, permutations)
-
-    println(logic.computeAnagrams(arg))
+//
+//    println(logic.computeAnagrams(arg))
+    permutations.compute(arg)
+    print("done")
 }
